@@ -1,0 +1,40 @@
+/* Chinese-led typography. Small editorial details preserve the established look. */
+.mesh-layer{position:absolute;inset:8% -5% 7%;z-index:0;overflow:hidden;pointer-events:none;opacity:.72;mask-image:radial-gradient(ellipse 51% 56% at 51% 48%,#000 12%,#000b3 45%,transparent 100%);animation:mesh-reveal 3.3s ease-out both}
+.mesh-canvas{display:block;width:100%;height:100%;pointer-events:none}
+@keyframes mesh-reveal{from{opacity:.15}to{opacity:.72}}
+@media(max-width:767px){.mesh-layer{inset:9% -12% 9%;opacity:.56;mask-image:radial-gradient(ellipse 65% 49% at 53% 42%,#000 10%,#00080 58%,transparent 100%);animation:none}}
+@media(prefers-reduced-motion:reduce){.mesh-layer{animation:none}}
+.home-stage .hero-copy{max-width:660px;padding-right:54px}
+.home-stage .name{position:relative;display:block;width:fit-content;font-size:clamp(80px,6.2vw,116px);line-height:1.16;font-weight:900;letter-spacing:.055em;transform:skewX(-4deg);background:linear-gradient(110deg,#fff 16%,#fae5ff 60%,#cba1e8);background-clip:text;filter:none}
+.home-stage .name:after{content:'';position:absolute;width:19px;height:4px;right:-31px;bottom:18%;transform:skewX(-30deg);background:#c773dc;box-shadow:none}
+.home-stage .chinese-title{display:block;font-size:clamp(36px,3.3vw,60px);font-weight:750;line-height:1.3;letter-spacing:.045em;margin:19px 0 16px;color:#e4d6ed;white-space:nowrap}
+.home-stage .site-suffix{font-size:.44em;font-weight:450;letter-spacing:.11em;margin-left:14px;color:#b5a0c3}
+.home-stage .portfolio-word{display:flex;align-items:center;width:fit-content;font-family:'Arial',sans-serif;font-size:24px;font-weight:500;letter-spacing:.22em;line-height:1.6;transform:none;padding:0;color:#ab91be;background:none;opacity:1}
+.home-stage .portfolio-word:before{content:'';display:inline-block;width:34px;height:1px;margin-right:15px;background:#ae75c7}
+.home-stage .portfolio-word i{font-style:normal;font-weight:700;font-size:30px;letter-spacing:0;color:#c477d7;margin-left:4px}
+.home-stage .hero h1{margin:27px 0 29px}.home-stage .hero-actions{margin-top:30px}
+/* Two exactly aligned full-size images crossfade without shifting the character. */
+.stage-art .ip-sleep{opacity:1;filter:brightness(.78)}
+.stage-art .ip-awake{opacity:0;filter:brightness(.78)}
+.portrait-halo{opacity:0;background:radial-gradient(ellipse at 64% 36%,#eb35c826,transparent 68%)}
+.scene-decor{position:absolute;inset:2% 0 0 9%;z-index:2;opacity:.03;overflow:hidden;pointer-events:none;mask-image:linear-gradient(90deg,transparent,#000 28%,#000 95%,transparent)}
+.scene-plane{position:absolute;width:42%;height:69%;right:-5%;top:12%;border:1px solid #ed8afc;background:linear-gradient(135deg,#a857ecaa,#f14ade33 60%,transparent);transform:skewX(-24deg);clip-path:polygon(0 0,100% 0,100% 86%,76% 100%,0 100%)}
+.plane-two{width:37%;height:42%;right:3%;top:50%;transform:skewX(-24deg);background:linear-gradient(160deg,#ffb6ff88,transparent 80%);border-color:#d499f7}
+.scene-orbit{position:absolute;right:-9%;top:5%;width:87%;height:64%;border:1px solid #e195ff;border-radius:50%;transform:rotate(-25deg)}
+.scene-grid{position:absolute;right:0;bottom:3%;width:77%;height:24%;transform:perspective(190px) rotateX(50deg);transform-origin:bottom;background:repeating-linear-gradient(90deg,transparent,transparent 59px,#c190f6 60px,transparent 61px),repeating-linear-gradient(0deg,transparent,transparent 29px,#c190f6 30px,transparent 31px);mask-image:linear-gradient(180deg,transparent,#000 60%)}
+.scene-star{position:absolute;right:8%;top:57%;font-size:70px;color:#efc4ff}
+.scene-caption{position:absolute;right:4%;top:34%;font:8px/1.9 var(--mono);letter-spacing:2px;color:#e4c5f6;writing-mode:vertical-rl}
+.particle-field{position:absolute;left:26%;right:5%;top:8%;bottom:6%;z-index:3;overflow:hidden;pointer-events:none;opacity:0;mask-image:linear-gradient(180deg,transparent,#000 15%,#000 75%,transparent)}
+.particle-field i{position:absolute;left:var(--x);bottom:0;width:var(--size);height:var(--size);border-radius:50%;background:#f2b7fb;box-shadow:0 0 7px #f65aea77;animation:particle-rise var(--travel) var(--start) linear infinite;opacity:0}
+@keyframes particle-rise{0%{transform:translate(0,0);opacity:0}15%{opacity:.45}70%{opacity:.32}100%{transform:translate(var(--drift),-700px);opacity:0}}
+.intro-paused .particle-field i{animation-play-state:paused}
+/* Contact details remain selectable and link to the phone/email applications. */
+#contact-dialog h2{font-weight:750;letter-spacing:-.02em;line-height:1.45}
+.contact-row>span{font-weight:550;letter-spacing:.04em}.contact-row a{font-family:var(--mono);font-size:14px;letter-spacing:.02em;color:#e7d9f0;overflow-wrap:anywhere}
+.contact-row a:hover{color:#efaff4}.contact-row a:focus-visible{outline:2px solid #c67fe3;outline-offset:5px}
+@media(min-width:1600px){.home-stage .hero-copy{max-width:780px;padding-right:65px}.home-stage .portfolio-word{font-size:27px}}
+@media(min-width:1200px) and (max-height:760px){.home-stage .name{font-size:78px}.home-stage .chinese-title{font-size:39px;margin:15px 0 10px}.home-stage .portfolio-word{font-size:21px}.home-stage .hero h1{margin:20px 0}}
+@media(min-width:768px) and (max-width:1199px){.home-stage .hero-copy{padding-right:25px}.home-stage .name{font-size:73px}.home-stage .chinese-title{font-size:36px}.home-stage .site-suffix{margin-left:10px}.home-stage .portfolio-word{font-size:21px}}
+@media(max-width:767px){.home-stage .hero-copy{padding:0;max-width:100%}.home-stage .name{font-size:62px;letter-spacing:.045em}.home-stage .name:after{width:13px;height:3px;right:-23px}.home-stage .chinese-title{font-size:29px;letter-spacing:.025em;margin:16px 0 12px}.home-stage .site-suffix{margin-left:9px;font-size:.48em}.home-stage .portfolio-word{font-size:17px;letter-spacing:.19em}.home-stage .portfolio-word:before{width:24px;margin-right:11px}.home-stage .portfolio-word i{font-size:23px}.home-stage .hero h1{margin:24px 0}.home-stage .hero{padding-bottom:445px}.stage-art{top:460px}.contact-row{flex-wrap:wrap;row-gap:12px}.contact-row a{font-size:13px}.scene-caption{font-size:6px;letter-spacing:1px}.scene-star{font-size:40px}.scene-plane{right:-10%}.particle-field{left:22%;right:8%}}
+@media(max-width:350px){.home-stage .name{font-size:54px}.home-stage .chinese-title{font-size:25px}.home-stage .site-suffix{margin-left:7px}.home-stage .portfolio-word{font-size:16px}.home-stage .hero{padding-bottom:370px}.stage-art{top:485px}.contact-row a{flex-basis:100%;padding-left:37px}}
+@media(prefers-reduced-motion:reduce){.stage-art .ip-awake{opacity:1!important;filter:none!important}.stage-art .ip-sleep{opacity:0!important}.scene-decor{opacity:.15!important}.portrait-halo{opacity:1!important}.particle-field{display:none}.particle-field i{animation:none}}
