@@ -17,7 +17,8 @@ let cleanupInteractions = () => {};
 
 const basePath = "/wyt-portfolio";
 function routePath(path) {
-  const clean = path === basePath ? '/' : path.startsWith(basePath + '/') ? path.slice(basePath.length) : path;
+  const entry = path.replace(/\/(?:\*{1,2}|(?:%2a){1,2})\/?$/i, '/').replace(/\/index\.html\/?$/i, '/');
+  const clean = entry === basePath ? '/' : entry.startsWith(basePath + '/') ? entry.slice(basePath.length) : entry;
   return clean.replace(/\/+$/, '') || '/';
 }
 function currentPath() {

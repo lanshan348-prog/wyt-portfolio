@@ -2,6 +2,14 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
+  <script>
+    (() => {
+      const path = location.pathname;
+      if (path !== '/wyt-portfolio' && !path.startsWith('/wyt-portfolio/')) return;
+      const clean = path.replace(/\/(?:\*{1,2}|(?:%2a){1,2})\/?$/i, '/').replace(/\/index\.html\/?$/i, '/');
+      if (clean !== path) location.replace(clean + location.search + location.hash);
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#080512" />
   <meta name="description" content="王钰桐的个人作品集。以设计构建视觉，以创意探索影像。探索视觉设计、AIGC创作与视频制作。" />
@@ -18,7 +26,7 @@
   <link rel="stylesheet" href="/wyt-portfolio/chiyan-style.css" />
   <link rel="stylesheet" href="/wyt-portfolio/app-project.css" />
   <link rel="stylesheet" href="/wyt-portfolio/responsive.css" />
-  <script type="module" src="/wyt-portfolio/app.js"></script>
+  <script type="module" src="/wyt-portfolio/app.js?v=20261014-linkfix"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳转至正文</a>
